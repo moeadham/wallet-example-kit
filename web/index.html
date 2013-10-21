@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+	<head>
+		<!-- Card info -->
+		<title>Gateway Demo</title>
+		<meta name="description" content="Gateway Demo">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="/css/default.css">
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+
+	<body>
+		<!-- Pages -->
+
+		<div class="app-page" data-page="home">
+			<div class="app-topbar">
+				<div class="app-title">Gateway</div>
+			</div>
+			<div class="app-content">
+				<div class="app-section" align="middle">
+					<h2>Welcome to Gateway</h2>
+					<h3>Sign up is instant</h3>
+					<h4>Please click proceed to add funds to the following ripple address</h4>
+					<h6>rfmzQLpUxHSyVqgT6pdGdyBRuT3Amx6xcK</h6>
+				</div>
+				<div class="app-section">
+					<div class="app-button" data-target="selectBank">Proceed to Payment</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="app-page" data-page="selectBank">
+			<div class="app-topbar">
+				<div class="app-button left" data-back="true">Back</div>
+				<div class="app-title">Select Bank</div>
+			</div>
+			<div class="app-content">
+				<div class="app-section" align="middle">
+					<h2>Payments secured by:</h2>
+					
+					<img src="https://www3.moneris.com/HPPDP/hpp/images/ca_iop_en-ca.png" />
+					<h3>Please select your bank</h3>
+				</div>
+				<div class="app-section">
+					<div class="app-button" data-target="submitPayment" >TD Canada Trust</div>
+					<div class="app-button" data-target="submitPayment">Royal Bank</div>
+					<div class="app-button" data-target="submitPayment">BMO Bank of Montreal</div>
+					<div class="app-button" data-target="submitPayment">Scotia Bank</div>
+					<div class="app-button" data-target="submitPayment">None of the Above</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="app-page" data-page="submitPayment">
+			<div class="app-topbar">
+				<div class="app-button left" data-back="true">Back</div>
+				<div class="app-title">Confrim Payment</div>
+			</div>
+			<div class="app-content">
+				<div class="app-section">
+					<h3>Online Banking website goes here.</h3>
+				</div>
+				<div class="app-section">
+					<input class="app-input" placeholder="16 Digit Debit Card Number">
+					<input class="app-input" placeholder="PIN number" type="password">
+					<div class="app-button" data-target="confirmed">Submit Payment</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="app-page" data-page="confirmed">
+			<div class="app-topbar">
+				<div class="app-button left" data-back="true">Back</div>
+				<div class="app-title">Confirmed</div>
+			</div>
+			<div class="app-content">
+				<div class="app-section" align="center">
+					<h3>Transaction Confirmed</h3>
+					<h4>You will receive an e-mail confirmation of your transaction from 
+						your bank. All done!</h4>
+					
+				</div>
+				<div class="app-section">
+					<div class="app-button" onclick="bridge.transactionSuccess();">Return to Ripple</div>
+				</div>
+			</div>
+		</div>
+		<!-- Scripts -->
+		<script src="/zerver/API.js"></script>
+		<script src="http://zeptojs.com/zepto.min.js"></script>
+		<script src="/js/app.js"></script>
+		<script src="/js/main.js"></script>
+	</body>
+</html>

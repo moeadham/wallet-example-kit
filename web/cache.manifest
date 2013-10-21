@@ -1,0 +1,12 @@
+CACHE MANIFEST
+
+/css/default.css
+/css/styles.css
+
+/zerver/API.js
+http://zeptojs.com/zepto.min.js
+/js/app.js
+/js/main.js
+
+NETWORK:
+*
